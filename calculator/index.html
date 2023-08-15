@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/images/favicon.webp" type="image/x-icon">
+
+    <!--=============== REMIXICONS ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <title>Calculator</title>
+</head>
+
+<body>
+    <!--=============== HEADER ===============-->
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav__data">
+                <a href="#" class="nav__logo">
+                    <i class="ri-code-s-slash-line"></i> Bikram's Website
+                </a>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-menu-line nav__toggle-menu"></i>
+                    <i class="ri-close-line nav__toggle-close"></i>
+                </div>
+            </div>
+
+            <!--=============== NAV MENU ===============-->
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li>
+                        <a href="/index.html" class="nav__link">Home</a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav__link">Calculator</a>
+                    </li>
+                    <li>
+                        <a href="/QR CODE/index.html" class="nav__link">QR</a>
+                    </li>
+                    <li>
+                        <a href="/portfolio/index.html" class="nav__link">Portfolio</a>
+                    </li>                    
+                    <li>
+                      <a href="/about/index.html" class="nav__link">About</a>
+                  </li> 
+                  <li>
+                    <a href="/photo.html" class="nav__link">Photography</a>
+                </li> 
+                <li>
+                  <a href="/contact.html" class="nav__link">Contact</a>
+              </li>                                                                        
+                </ul>
+            </div>
+        </nav>
+        <div class="contain">
+            <div class="calculator">
+              <form>
+                <div class="display">
+                  <input type="text" name="display">
+                </div>
+                <div>
+                  <input type="button" value="AC" onclick="display.value = '' " class="operator">
+                  <input type="button" value="DE" onclick="display.value =  display.value.toString().slice(0,-1)" class="operator">
+                  <input type="button" value="." onclick="display.value += '.' " class="operator">
+                  <input type="button" value="/" onclick="display.value += '/' " class="operator">
+                </div>
+                <div>
+                  <input type="button" value="7" onclick="display.value += '7' ">
+                  <input type="button" value="8" onclick="display.value += '8' ">
+                  <input type="button" value="9" onclick="display.value += '9' ">
+                  <input type="button" value="*" onclick="display.value += '*' " class="operator">
+                </div>
+                <div>
+                  <input type="button" value="4" onclick="display.value += '4' ">
+                  <input type="button" value="5" onclick="display.value += '5' ">
+                  <input type="button" value="6" onclick="display.value += '6' ">
+                  <input type="button" value="-" onclick="display.value += '-' " class="operator">
+                </div>
+                <div>
+                  <input type="button" value="1" onclick="display.value += '1' ">
+                  <input type="button" value="2" onclick="display.value += '2' ">
+                  <input type="button" value="3" onclick="display.value += '3' ">
+                  <input type="button" value="+" onclick="display.value += '+' " class="operator">
+                </div>
+                <div>
+                  <input type="button" value="00" onclick="display.value += '00' ">
+                  <input type="button" value="0" onclick="display.value += '0' ">
+                  <input type="button" value="=" onclick="display.value = eval(display.value)" class="equal operator">
+                 
+                </div>
+              </form>
+            </div>
+          </div>
+    </header>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
